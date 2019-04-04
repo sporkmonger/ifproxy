@@ -1,4 +1,9 @@
 # Conditional Proxy
+
+[![GoDoc Widget]][GoDoc]
+
+----
+
 A reverse proxy for golang that allows requests to be blocked/aborted before
 being sent upstream.
 
@@ -10,3 +15,6 @@ Otherwise, the `ConditionalReverseProxy` behaves exactly the same way as the
 `ReverseProxy` from `httputil`.
 
 Requires Go 1.12+.
+
+[GoDoc]: https://godoc.org/github.com/sporkmonger/ifproxy
+[GoDoc Widget]: https://godoc.org/github.com/sporkmonger/ifproxy?status.svg
