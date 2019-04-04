@@ -1,6 +1,6 @@
 # Conditional Proxy
 
-[![GoDoc Widget]][GoDoc]
+[![GoDoc Widget]][GoDoc] [![Build Widget]][Build]
 
 ----
 
@@ -18,3 +18,5 @@ Requires Go 1.12+.
 
 [GoDoc]: https://godoc.org/github.com/sporkmonger/ifproxy
 [GoDoc Widget]: https://godoc.org/github.com/sporkmonger/ifproxy?status.svg
+[Build]: https://circleci.com/gh/sporkmonger/ifproxy
+[Build Widget]: https://circleci.com/gh/sporkmonger/ifproxy.svg?style=shield
