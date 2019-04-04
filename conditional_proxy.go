@@ -16,6 +16,7 @@ import (
 	"net"
 	"net/http"
 	"net/http/httptest"
+	"net/http/httputil"
 	"net/url"
 	"strings"
 	"sync"
@@ -64,7 +65,7 @@ type ConditionalReverseProxy struct {
 	// BufferPool optionally specifies a buffer pool to
 	// get byte slices for use by io.CopyBuffer when
 	// copying HTTP response bodies.
-	BufferPool BufferPool
+	BufferPool httputil.BufferPool
 
 	// CreateResponse is an optional function that creates a
 	// Response without sending a request to the backend.
@@ -109,13 +110,6 @@ type ConditionalReverseProxy struct {
 	// If nil, the default is to log the provided error and return
 	// a 502 Status Bad Gateway response.
 	ErrorHandler func(http.ResponseWriter, *http.Request, error)
-}
-
-// A BufferPool is an interface for getting and returning temporary
-// byte slices for use by io.CopyBuffer.
-type BufferPool interface {
-	Get() []byte
-	Put([]byte)
 }
 
 func singleJoiningSlash(a, b string) string {
