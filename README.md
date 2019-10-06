@@ -14,7 +14,7 @@ will be returned. This can be customized via the `CreateResponse` function.
 Otherwise, the `ConditionalReverseProxy` behaves exactly the same way as the
 `ReverseProxy` from `httputil`.
 
-Requires Go 1.12+.
+Requires Go 1.13+.
 
 [GoDoc]: https://godoc.org/github.com/sporkmonger/ifproxy
 [GoDoc Widget]: https://godoc.org/github.com/sporkmonger/ifproxy?status.svg
